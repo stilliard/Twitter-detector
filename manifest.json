@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+
+    "name": "Twitter detector",
+    "description": "This extension adds a twitter icon into the url/address bar when it finds a twitter account for the page its on.",
+    "version": "1.0",
+
+    "page_action": {
+        "default_icon": "icon-19x19.png"
+    },
+
+    "permissions" : [
+        "tabs", "<all_urls>"
+    ],
+    "background": {
+        "scripts": ["app.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentscript.js"]
+        }
+    ]
+
+}
