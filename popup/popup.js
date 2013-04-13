@@ -9,7 +9,8 @@ chrome.extension.sendRequest({ action: 'getAccounts' }, function (response) {
         template = document.getElementById('template-twitter-account').innerHTML,
         html = '',
         scriptTag,
-        firstScriptTag;
+        firstScriptTag,
+        links;
 
     // Build the html list of accounts found
     response.accounts.forEach(function (account) {
@@ -23,5 +24,16 @@ chrome.extension.sendRequest({ action: 'getAccounts' }, function (response) {
     scriptTag.src = 'twitter-widgets.js'; // local copy of http://platform.twitter.com/widgets.js
     firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag);
 
-})
+    // setup twitter profile links to actually link over
+    links = document.getElementsByClassName('twitter-profile-link');
+    [].forEach.call(links, function (link) {
+        link.addEventListener('click', function () {
+            // send a message back to the contentscript to redirect the page
+            chrome.tabs.getSelected(null, function(tab) {
+                chrome.tabs.sendRequest(tab.id, { action: 'setUrl', url: link.href });
+            });
+        }, false);
+    });
+
+});
 
