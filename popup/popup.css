@@ -6,13 +6,30 @@
 }
 
 body {
-    font: 11px/1 sans-serif;
+    font: 12px/1 sans-serif;
 }
 
 /* each account */
 #twitter-accounts-container li {
-    padding: 4px;
+    padding: 8px;
+    width: 200px;
+    border-bottom: 1px solid #CCC;
+}
+#twitter-accounts-container li:last-child {
+    border-bottom: none;
 }
 #twitter-accounts-container li:hover {
     background: #C0DEED;
+}
+.twitter-profile-link {
+    text-decoration: none;
+    color: #0084b4;
+}
+.twitter-profile-link:hover {
+    text-decoration: underline;
+    color: #2276bb;
+}
+.twitter-follow-button {
+    float: right;
+    margin-top: -4px;
 }
