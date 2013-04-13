@@ -3,7 +3,7 @@
 
     "name": "Twitter detector",
     "description": "This extension adds a twitter icon into the url/address bar when it finds a twitter account for the page its on.",
-    "version": "1.2",
+    "version": "1.3",
 
     "page_action": {
         "default_icon": "images/icon-19x19.png"

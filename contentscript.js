@@ -6,7 +6,7 @@
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
 
     var accounts = [];
-    
+
     // get the data we need from the page
     if (request.action == 'getPageData') {
 
