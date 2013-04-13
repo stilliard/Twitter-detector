@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Accounts List Popup</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <!-- list of twitter accounts -->
+    <ul id="twitter-accounts-container"></ul>
+
+    <!-- Template for each account -->
+    <script id="template-twitter-account" type="text/x-template">
+        <li>
+            <a href="https://twitter.com/{account}" class="twitter-follow-button" data-show-count="false">Follow @{account}</a>
+        </li>
+    </script>
+
+    <!-- build the app -->
+    <script src="popup.js"></script>
+
+</body>
+</html>

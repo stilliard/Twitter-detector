@@ -1,0 +1,19 @@
+
+/* and the worlds worst reset award goes to: */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    max-height: 100px;
+}
+
+/* each account */
+#twitter-accounts-container li {
+    padding: 4px;
+}
+#twitter-accounts-container li:hover {
+    background: #C0DEED;
+}
