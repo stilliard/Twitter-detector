@@ -23,17 +23,22 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
                 var matches = account.match(/\/\/twitter.com\/(([A-z0-9_-]{1,15}).*?)/);
                 return matches ? matches[1] : '';
             });
+
+            // remove duplicates or blanks
+            accounts = accounts.filter(function(elem, pos, self) {
+                return self.indexOf(elem) == pos && elem !== '';
+            });
+
+            // respond back
+            sendResponse({
+                accounts: accounts
+            });
+
+        } else {
+            sendResponse({
+                accounts: []
+            });
         }
-
-        // remove duplicates or blanks
-        accounts = accounts.filter(function(elem, pos, self) {
-            return self.indexOf(elem) == pos && elem !== '';
-        });
-
-        // respond back
-        sendResponse({
-            accounts: accounts
-        });
     }
 
     // redirect?
