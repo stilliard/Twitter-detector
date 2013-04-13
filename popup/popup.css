@@ -5,9 +5,8 @@
     padding: 0;
 }
 
-body,
-html {
-    max-height: 100px;
+body {
+    font: 11px/1 sans-serif;
 }
 
 /* each account */
