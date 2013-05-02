@@ -11,16 +11,16 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
     if (request.action == 'getPageData') {
 
         // gather all twitter links in page
-        accounts = document.body.innerHTML.match(/\/\/twitter.com\/(([A-z0-9_-]{1,15}).*?)(\'|\"|\s)/g);
+        accounts = document.body.innerHTML.match(/\/\/(www\.)?twitter.com\/(([A-z0-9_-]{1,15}).*?)(\'|\"|\s)/g);
 
         // any found? (and not on twitter itself)
         if (accounts && ! location.href.match('twitter.com')) {
 
             // clean up the urls to just the handles
             accounts = accounts.filter(function (account) {
-                return ! account.match(/(intent|statuses)\//);
+                return ! account.match(/\/(intent|statuses|share|home)\//);
             }).map(function(account) {
-                var matches = account.match(/\/\/twitter.com\/(([A-z0-9_-]{1,15}).*?)/);
+                var matches = account.match(/\/\/(www\.)?twitter.com\/(([A-z0-9_-]{1,15}).*?)/);
                 return matches ? matches[1] : '';
             });
 
