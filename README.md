@@ -8,3 +8,7 @@ Feel free to add issues as feature requests etc, or via the support section in c
 Install / try out:
 -------------------
 https://chrome.google.com/webstore/detail/twitter-detector/papcdbgfejihdinhieggiamjnkclhkck
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/stilliard/twitter-detector/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
