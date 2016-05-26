@@ -10,5 +10,5 @@ Install / try out:
 https://chrome.google.com/webstore/detail/twitter-detector/papcdbgfejihdinhieggiamjnkclhkck
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/stilliard/twitter-detector/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Development sponsored by [ecommerce.co.uk](https://www.ecommerce.co.uk/?utm_source=chrome-twitter-detector&utm_medium=referral&utm_campaign=open-source)
 
