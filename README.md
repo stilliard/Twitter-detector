@@ -9,6 +9,3 @@ Install / try out:
 -------------------
 https://chrome.google.com/webstore/detail/twitter-detector/papcdbgfejihdinhieggiamjnkclhkck
 
-
-Development sponsored by [ecommerce.co.uk](https://www.ecommerce.co.uk/?utm_source=chrome-twitter-detector&utm_medium=referral&utm_campaign=open-source)
-
