@@ -3,7 +3,7 @@
 
     "name": "Twitter account detector",
     "description": "This extension offers a quick way to show all twitter accounts from the page its on.",
-    "version": "1.8",
+    "version": "2.0",
 
     "page_action": {
         "default_icon": "images/icon-19x19.png"
@@ -16,7 +16,7 @@
     },
 
     "permissions" : [
-        "tabs", "<all_urls>"
+        "activeTab"
     ],
     "background": {
         "scripts": ["extension.js"]
