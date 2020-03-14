@@ -9,3 +9,11 @@ Install / try out:
 -------------------
 https://chrome.google.com/webstore/detail/twitter-detector/papcdbgfejihdinhieggiamjnkclhkck
 
+Dev build:
+-----------
+
+Build latest version with:
+```
+web-ext build --overwrite-dest
+```
+

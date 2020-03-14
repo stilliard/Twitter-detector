@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
 
-    "name": "Twitter detector - detect twitter accounts",
-    "description": "This extension adds a twitter icon into the url / address bar when it finds all twitter accounts for the page its on.",
-    "version": "1.5",
+    "name": "Twitter account detector",
+    "description": "This extension offers a quick way to show all twitter accounts from the page its on.",
+    "version": "1.7",
 
     "page_action": {
         "default_icon": "images/icon-19x19.png"
