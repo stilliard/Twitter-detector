@@ -1,26 +1,23 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
 
     "name": "Twitter account detector",
     "description": "This extension offers a quick way to show all twitter accounts from the page its on.",
-    "version": "2.0",
+    "version": "3.0",
 
-    "page_action": {
-        "default_icon": "images/icon-19x19.png"
+    "action": {
+        "browser_style": true,
+        "default_icon": {
+            "16": "images/icon-16x16.png",
+            "48": "images/icon-48x48.png",
+            "128": "images/icon-128x128.png"
+        },
+        "default_popup": "popup/popup.html"
     },
-
-    "icons": {
-        "16": "images/icon-16x16.png",
-        "48": "images/icon-48x48.png",
-        "128": "images/icon-128x128.png"
-    },
-
     "permissions" : [
         "activeTab"
     ],
-    "background": {
-        "scripts": ["extension.js"]
-    },
+    "host_permissions": ["*://*/*"],
 
     "content_scripts": [
         {

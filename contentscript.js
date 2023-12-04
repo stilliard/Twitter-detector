@@ -3,13 +3,13 @@
 // 
 
 // await requests from parent extension
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
     var accounts = [],
         pageHtml;
 
     // get the data we need from the page
-    if (request.action == 'getPageData') {
+    if (message.action == 'getPageData') {
 
         pageHtml = document.body.innerHTML;
 
@@ -56,8 +56,8 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
     }
 
     // redirect?
-    if (request.action == 'setUrl') {
-        location.href = request.url;
+    if (message.action == 'setUrl') {
+        location.href = message.url;
     }
 
 });
