@@ -13,6 +13,12 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             firstScriptTag,
             links;
 
+        // no accounts found?
+        if ( ! response.accounts.length) {
+            container.innerHTML = '<p>No twitter accounts found on this page.</p>';
+            return;
+        }
+
         // Build the html list of accounts found
         response.accounts.forEach(function (account) {
             html += template.replace(/\{account\}/g, account);
