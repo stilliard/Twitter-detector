@@ -13,8 +13,14 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             firstScriptTag,
             links;
 
+        // no response?
+        if (! response || ! response.accounts) {
+            container.innerHTML = '<p>Unable to get twitter accounts from this page.</p>';
+            return;
+        }
+
         // no accounts found?
-        if ( ! response.accounts.length) {
+        if (! response.accounts.length) {
             container.innerHTML = '<p>No twitter accounts found on this page.</p>';
             return;
         }
